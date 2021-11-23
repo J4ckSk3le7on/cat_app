@@ -1,10 +1,27 @@
+import 'package:cat_app/home_page/controller/home_page_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePageMobile extends StatelessWidget {
   const HomePageMobile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GetBuilder<SolicitudController>(
+      init: SolicitudController(),
+      builder: (_) {
+        return Scaffold(
+          appBar: AppBar(),
+          body: Center(
+            child:  _.widget
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () => _.refreshImage(),
+            child: const Icon(Icons.refresh),
+          ),
+        );
+      },
+    );
   }
+
 }

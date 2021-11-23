@@ -18,6 +18,7 @@ dependencies:
   get:
   sizer:
   responsive_builder:
+  cached_network_image:
 
   cupertino_icons:
 

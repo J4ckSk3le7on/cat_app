@@ -14,12 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
-        return const GetMaterialApp(
+        return GetMaterialApp(
           title: 'Bolivariano App',
           debugShowCheckedModeBanner: false,
           initialRoute: AppRoutes.homePageWrapper,
+          getPages: AppPages.pages,
         );
       },
     );
   }
+  
 }
