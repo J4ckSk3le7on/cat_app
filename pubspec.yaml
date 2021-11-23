@@ -17,14 +17,15 @@ dependencies:
   # Utilities
   get:
   sizer:
+  responsive_builder:
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^1.0.0
+  flutter_lints:
 
 flutter:
 
