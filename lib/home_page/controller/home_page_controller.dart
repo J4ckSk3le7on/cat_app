@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 class SolicitudController extends GetxController {
 
   // Variables
-  var _catUrl;
-  var _widget;
+  late String _catUrl;
+  late Widget _widget;
 
   // Getters
   String get catUrl => _catUrl;
