@@ -1,4 +1,5 @@
 import 'package:cat_app/core/routes.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (kDebugMode) {
+      print('object');
+    }
     return Sizer(
       builder: (context, orientation, deviceType) {
         return GetMaterialApp(
