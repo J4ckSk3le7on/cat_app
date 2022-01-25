@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,7 +22,10 @@ class SolicitudController extends GetxController {
 
   @override
   void onReady() {
-    Future.delayed(const Duration(seconds: 1), () {
+    if (kDebugMode) {
+      print('Ready!');
+    
+    }Future.delayed(const Duration(seconds: 1), () {
       _widget = CachedNetworkImage(
         imageUrl: catUrl,
         placeholder: (context, url) => const CircularProgressIndicator(),
